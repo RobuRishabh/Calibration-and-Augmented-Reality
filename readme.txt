@@ -1,9 +1,3 @@
-/*author: HRITHIK KANOJE, RISHABH SINGH
-Class: CS5330 Pattern Recog & Computer Vision
-Prof: Bruce Maxwell
-Project 4: Calibration and Augmented Reality
-*/
-
 
 We used visualstudio IDE, for the project. for running the code, I just click on build the whole assignment and then click on the
 "Local Windows Debugger".
