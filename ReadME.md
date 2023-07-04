@@ -35,7 +35,8 @@ To achieve this, we can use the functions provided by OpenCV: **findChessboardCo
 
 - findChessboardCorners() : It helps in locating the corners of the checkerboard pattern in the image or video frame. It returns a set of detected corners. These corners can be stored in a std::vector called corner_set, where each entry represents a corner and can be accessed using corner_set[i].x and corner_set[i].y to get the coordinates of the corner.
 ```
-bool cv::findChessboardCorners(InputArray image, Size patternSize, OutputArray corners, int flags = CALIB_CB_ADAPTIVE_THRESH + CALIB_CB_NORMALIZE_IMAGE);
+bool cv::findChessboardCorners(InputArray image, Size patternSize, 
+				OutputArray corners, int flags = CALIB_CB_ADAPTIVE_THRESH + CALIB_CB_NORMALIZE_IMAGE);
 ```
 	
 Once the corners are found, we can use the 
@@ -43,7 +44,8 @@ Once the corners are found, we can use the
 
 - cornerSubPix(): It refines the corner positions for better accuracy. This function further refines the detected corners to sub-pixel accuracy, improving the precision of the corner coordinates.
 ```
-void cv::cornerSubPix(InputArray image, InputOutputArray corners, Size winSize, Size zeroZone, TermCriteria criteria); 	
+void cv::cornerSubPix(InputArray image, InputOutputArray corners, 
+			Size winSize, Size zeroZone, TermCriteria criteria); 	
 ```
 In order to test the system, you can display the image or video with the detected corners marked and also print out the number of corners found along with the coordinates of the first corner. Typically, the first corner will be located in the upper-left of the checkerboard as seen in the image or video.
 
@@ -118,11 +120,7 @@ By accurately detecting and tracking these features in real time, we can establi
 
 The detected feature points act as reference points that can be used for tracking and aligning virtual objects within the captured images. This alignment allows us to place virtual objects in the scene in a visually consistent and accurate manner.
 
-
-
-
-
-
+## Summary 
 
 - Command-Line Arguments: The program expects two command-line arguments: <target> and <obj_name>. 
 	<target> should be either "chessboard" or "circlesgrid," indicating the type of target pattern. 
